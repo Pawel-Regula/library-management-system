@@ -16,7 +16,7 @@ New features are introduced incrementally, and each branch builds on the previou
 | Branch name        | Base branch | Description |
 |--------------------|------------|-------------|
 | main               | —          | Project overview and documentation |
-| lab-01-java-se     | main       | Java SE fundamentals: domain model, DTOs, Streams API, serialization, parallel processing |
+| 01-java-se         | main       | Java SE fundamentals: domain model, DTOs, Streams API, serialization, parallel processing |
 
 ## Technologies (planned / used)
 - Java
