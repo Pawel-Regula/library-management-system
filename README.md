@@ -13,10 +13,11 @@ New features are introduced incrementally, and each branch builds on the previou
 
 ### Branches
 
-| Branch name        | Base branch | Description |
-|--------------------|------------|-------------|
-| main               | —          | Project overview and documentation |
-| 01-java-se         | main       | Java SE fundamentals: domain model, DTOs, Streams API, serialization, parallel processing |
+| Branch name        | Description |
+|--------------------|-------------------------|
+| main               | Project overview and documentation |
+| 01-java-se         | Java SE fundamentals: domain model, DTOs, Streams API, serialization, parallel processing |
+| 02-spring-backend  | Spring Boot backend: REST API, Spring MVC, JPA persistence, layered architecture |
 
 ## Technologies (planned / used)
 - Java
