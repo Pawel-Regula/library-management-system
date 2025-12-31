@@ -1,0 +1,120 @@
+### POST /api/authors
+POST http://localhost:8080/api/authors
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Olga",
+  "middleName": "Nawoja",
+  "surname": "Tokarczuk"
+}
+> {%
+    client.log(response.body);
+    client.global.set("authorId", response.body.id);
+%}
+
+### GET /api/authors
+GET http://localhost:8080/api/authors
+Accept: application/json
+
+### GET /api/authors/{id}
+GET http://localhost:8080/api/authors/{{authorId}}
+Accept: application/json
+
+### PUT /api/authors/{id}
+PUT http://localhost:8080/api/authors/{{authorId}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Andrzej",
+  "middleName": "",
+  "surname": "Sapkowski"
+}
+
+### DELETE /api/authors/{id}
+DELETE http://localhost:8080/api/authors/{{authorId}}
+Accept: application/json
+
+### POST /api/authors
+POST http://localhost:8080/api/authors
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Andrzej",
+  "middleName": "",
+  "surname": "Sapkowski"
+}
+> {%
+    client.log(response.body);
+    client.global.set("authorId2", response.body.id);
+%}
+
+### GET /api/authors/{authorId}/books
+GET http://localhost:8080/api/authors/{{authorId2}}/books
+Accept: application/json
+
+### POST /api/authors/{authorId}/books
+POST http://localhost:8080/api/authors/{{authorId2}}/books
+Content-Type: application/json
+Accept: application/json
+
+{
+  "isbn": "978-83-0000000-0",
+  "title": "Wiedzmin",
+  "genre": "HISTORICAL",
+  "publicationYear": 1986,
+  "pages": 321
+}
+> {%
+client.log(response.body);
+client.global.set("bookId", response.body.id);
+%}
+
+### GET /api/authors/{authorId}/books/{bookId}
+GET http://localhost:8080/api/authors/{{authorId2}}/books/{{bookId}}
+Accept: application/json
+
+### POST /api/authors/{authorId}/books
+POST http://localhost:8080/api/authors/{{authorId2}}/books
+Content-Type: application/json
+Accept: application/json
+
+{
+  "isbn": "97832-83-0120030-0",
+  "title": "Wiedzmin Zabojcy krolow",
+  "genre": "HISTORICAL",
+  "publicationYear": 2011,
+  "pages": 256
+}
+> {%
+client.log(response.body);
+client.global.set("bookId", response.body.id);
+%}
+
+### PUT /api/authors/{authorId}/books/{bookId}
+PUT http://localhost:8080/api/authors/{{authorId2}}/books/{{bookId}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "isbn": "978-83-0000000-1",
+  "title": "Wiedzmin Dziki Gon",
+  "genre": "FANTASY",
+  "publicationYear": 2021,
+  "pages": 456
+}
+
+### DELETE /api/authors/{authorId}/books/{bookId}
+DELETE http://localhost:8080/api/authors/{{authorId2}}/books/{{bookId}}
+Accept: application/json
+
+### DELETE /api/authors/{authorId}/books/{bookId}
+DELETE http://localhost:8080/api/authors/{{authorId2}}/books/{{bookId}}
+Accept: application/json
+
+
+### GET /api/authors/{authorId}/books
+GET http://localhost:8080/api/authors/{{authorId2}}/books
+Accept: application/json
